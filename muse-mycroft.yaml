@@ -1,19 +1,13 @@
-substitutions:
-  name: m5stack-atom-echo
-  friendly_name: M5Stack Atom Echo
-
 esphome:
-  name: ${name}
+  name: raspiaudio-muse-proto
+  friendly_name: RaspiAudio Muse Proto
+  min_version: 2024.9.0
   name_add_mac_suffix: true
-  friendly_name: ${friendly_name}
-  min_version: 2025.2.0
 
 esp32:
-  board: m5stack-atom
+  board: esp-wrover-kit
   framework:
-    type: esp-idf
-    version: 4.4.8
-    platform_version: 5.4.0
+    type: arduino
 
 logger:
 api:
