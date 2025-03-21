@@ -41,6 +41,7 @@ i2s_audio:
   - id: i2s_audio_bus
     i2s_lrclk_pin: GPIO25
     i2s_bclk_pin: GPIO5
+    i2s_mclk_pin: GPIO0
     
 #microphone:
 #  - platform: i2s_audio
@@ -60,13 +61,12 @@ microphone:
 speaker:
   - platform: i2s_audio
     id: echo_speaker
-    #i2s_dout_pin: GPIO22
     i2s_dout_pin: GPIO26
     dac_type: external
-    #bits_per_sample: 32bit
-    #channel: right
-    #buffer_duration: 60ms
-    mode: mono
+    sample_rate: 48000
+    bits_per_sample: 16bit
+    channel: left
+    buffer_duration: 100ms 
 
 media_player:
   - platform: speaker
